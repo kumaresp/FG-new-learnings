@@ -34,8 +34,7 @@ public class TokensController {
 	    if (requestAttributes instanceof ServletRequestAttributes) {
 	        HttpServletRequest request = ((ServletRequestAttributes)requestAttributes).getRequest();
 	        x_api_key=request.getHeader("x-api-key");	     
-	    }
-		
+	    }		
 		return ResponseEntity.ok(tokenService.validateAccessToken(inlineObject,x_api_key));
 	}
 
